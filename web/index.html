@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>API Status Monitor</title>
+    <link rel="stylesheet" href="/static/app.css" />
+  </head>
+  <body>
+    <header class="wrap">
+      <div class="title">
+        <h1>API Status Monitor</h1>
+        <p class="sub">Live status + uptime (24h / all-time)</p>
+      </div>
+      <div class="right">
+        <div class="meta" id="meta">Loading…</div>
+        <button class="btn" id="refresh">Refresh</button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="card">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Endpoint</th>
+              <th>Status</th>
+              <th>Uptime (24h)</th>
+              <th>Uptime (all)</th>
+              <th>Latency</th>
+              <th>Last check</th>
+              <th>HTTP</th>
+            </tr>
+          </thead>
+          <tbody id="rows">
+            <tr>
+              <td colspan="7" class="muted">No data yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card" style="margin-top: 12px">
+        <div class="row">
+          <div>
+            <h2 class="h2">History</h2>
+            <div class="muted" id="historyHint">Click an endpoint name to view the last checks.</div>
+          </div>
+          <div class="right">
+            <button class="btn btn-ghost" id="clearHistory" disabled>Clear</button>
+          </div>
+        </div>
+        <pre class="history" id="history"></pre>
+      </div>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
+

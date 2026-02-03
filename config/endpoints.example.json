@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Example API",
+    "url": "https://example.com",
+    "method": "GET",
+    "interval_seconds": 30,
+    "timeout_seconds": 10,
+    "headers": {
+      "User-Agent": "api-status-monitor/1.0"
+    },
+    "expected_statuses": [200, 204]
+  }
+]
+
